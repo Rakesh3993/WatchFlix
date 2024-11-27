@@ -34,13 +34,22 @@ class HomeViewController: UIViewController {
         table.isUserInteractionEnabled = true
         return table
     }()
+    
+    private var logoImageView: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "netflix_logo")
+        image.contentMode = .scaleAspectFit
+        image.translatesAutoresizingMaskIntoConstraints = false
+        return image
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(headerView)
         view.addSubview(homeTableView)
-        let logoImage = UIImage(named: "netflix_logo")?.withRenderingMode(.alwaysOriginal)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: logoImage, style: .done, target: self, action: nil)
+//        let logoImage = UIImage(named: "netflix_logo")?.withRenderingMode(.alwaysOriginal)
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(image: logoImage, style: .done, target: self, action: nil)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: logoImageView)
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle")?.withRenderingMode(.alwaysOriginal).withTintColor(.label), style: .done, target: self, action: nil)
         navigationController?.navigationBar.tintColor = .white
         homeTableView.delegate = self
@@ -79,7 +88,10 @@ class HomeViewController: UIViewController {
             homeTableView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 40),
             homeTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             homeTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            homeTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            homeTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            
+            logoImageView.heightAnchor.constraint(equalToConstant: 35),
+            logoImageView.widthAnchor.constraint(equalToConstant: 35)
         ])
     }
 }
