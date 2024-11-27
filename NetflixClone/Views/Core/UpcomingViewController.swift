@@ -82,7 +82,7 @@ extension UpcomingViewController: UITableViewDelegate, UITableViewDataSource {
             case .success(let youtubeData):
                 DispatchQueue.main.async {
                     let vc = VideoViewController()
-                    vc.configure(with: youtubeData.videoId)
+                    vc.configure(with: youtubeData.videoId ?? "")
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
             case .failure(let error):

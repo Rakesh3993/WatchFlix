@@ -108,7 +108,7 @@ extension HomeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
         APICaller.shared.search(query: title + "trailer") { result in
             switch result {
             case .success(let youtubeData):
-                self.delegate?.homeTableViewDidTapCell(viewModel: YoutubeViewModel(id: youtubeData.videoId))
+                self.delegate?.homeTableViewDidTapCell(viewModel: YoutubeViewModel(id: youtubeData.videoId ?? ""))
             case .failure(let error):
                 print(error)
             }

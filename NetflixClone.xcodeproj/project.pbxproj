@@ -32,6 +32,7 @@
 		7EFB4A822CF5BB3C00F867EB /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB4A812CF5BB3C00F867EB /* LaunchViewController.swift */; };
 		7EFB4A842CF73E8600F867EB /* HeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB4A832CF73E7300F867EB /* HeaderViewModel.swift */; };
 		7EFB4A862CF74C9F00F867EB /* UpcomingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB4A852CF74C9F00F867EB /* UpcomingTableViewCell.swift */; };
+		7EFB4A882CF76D9F00F867EB /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB4A872CF76D9F00F867EB /* SearchResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		7EFB4A812CF5BB3C00F867EB /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		7EFB4A832CF73E7300F867EB /* HeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewModel.swift; sourceTree = "<group>"; };
 		7EFB4A852CF74C9F00F867EB /* UpcomingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTableViewCell.swift; sourceTree = "<group>"; };
+		7EFB4A872CF76D9F00F867EB /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				7E26F8792CF2FD120055F2CA /* ProfileViewController.swift */,
 				7EFB4A812CF5BB3C00F867EB /* LaunchViewController.swift */,
 				7EFB4A852CF74C9F00F867EB /* UpcomingTableViewCell.swift */,
+				7EFB4A872CF76D9F00F867EB /* SearchResultViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				7EFB4A842CF73E8600F867EB /* HeaderViewModel.swift in Sources */,
 				7E7E65442CEFAF6C003AD6EB /* HomeTableViewCell.swift in Sources */,
 				7E7E64E52CEF0E24003AD6EB /* HomeViewController.swift in Sources */,
+				7EFB4A882CF76D9F00F867EB /* SearchResultViewController.swift in Sources */,
 				7E7E64E62CEF0E24003AD6EB /* MainTabBarController.swift in Sources */,
 				7E7E64E72CEF0E24003AD6EB /* SearchViewController.swift in Sources */,
 				7E7E65482CF06A2E003AD6EB /* SeeAllViewController.swift in Sources */,

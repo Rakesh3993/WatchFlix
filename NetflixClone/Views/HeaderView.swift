@@ -197,7 +197,7 @@ extension HeaderView: UICollectionViewDelegate, UICollectionViewDataSource, UICo
             APICaller.shared.search(query: query + "trailer") { result in
                 switch result {
                 case .success(let youtubeData):
-                    let viewModel = YoutubeViewModel(id: youtubeData.videoId)
+                    let viewModel = YoutubeViewModel(id: youtubeData.videoId ?? "")
                     self.headerDelegate?.headerCollectionViewCellTapped(viewModel: viewModel)
                 case .failure(let error):
                     print(error)
@@ -216,7 +216,7 @@ extension HeaderView: WatchButtonDelegate {
         APICaller.shared.search(query: query + "trailer") { result in
             switch result {
             case .success(let youtubeData):
-                let viewModel = YoutubeViewModel(id: youtubeData.videoId)
+                let viewModel = YoutubeViewModel(id: youtubeData.videoId ?? "")
                 self.headerDelegate?.headerCollectionViewCellTapped(viewModel: viewModel)
             case .failure(let error):
                 print(error)

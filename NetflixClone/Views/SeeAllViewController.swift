@@ -106,7 +106,7 @@ extension SeeAllViewController: UICollectionViewDelegate, UICollectionViewDataSo
         APICaller.shared.search(query: query + "trailer") { result in
             switch result {
             case .success(let youtubeData):
-                let viewModel = YoutubeViewModel(id: youtubeData.videoId)
+                let viewModel = YoutubeViewModel(id: youtubeData.videoId ?? "")
                 self.delegate?.seeAllCollectionViewTapped(viewModel: viewModel)
             case .failure(let error):
                 print(error)
