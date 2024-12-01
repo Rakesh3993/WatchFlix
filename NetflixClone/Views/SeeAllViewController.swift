@@ -17,7 +17,7 @@ class SeeAllViewController: UIViewController {
     
     private var movieArray: [Results] = []
     private var TVArray: [Tvshows] = []
-    weak var delegate: SeeAllCollectionViewDelegate?
+    var delegate: SeeAllCollectionViewDelegate?
     private var isMovie: Bool?
 
     private var seeAllCollectionView: UICollectionView = {
